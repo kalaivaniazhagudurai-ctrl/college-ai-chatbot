@@ -802,6 +802,7 @@ def chat():
         or "phone" in message
         or "email" in message
         or "address" in message
+        or "location" in message
     ):
 
         contact = COLLEGE_DATA.get(
