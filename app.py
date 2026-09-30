@@ -797,33 +797,25 @@ def chat():
     # CONTACT
     # -----------------------------------
 
-    if (
-        "contact" in message
-        or "phone" in message
-        or "email" in message
-        or "address" in message
-        or "location" in message
-    ):
+    location_words = [
+    "location",
+    "locaton",
+    "locashun",
+    "address",
+    "college enga",
+    "clg enga",
+    "enga iruku",
+    "enga irukku",
+    "where is college",
+    "where is the college"
+]
 
-        contact = COLLEGE_DATA.get(
-            "contact",
-            {}
-        )
+    if any(word in message for word in location_words):
+    address = COLLEGE_DATA.get("address", "")
 
-        address = COLLEGE_DATA.get(
-            "address",
-            ""
-        )
-
-        reply = (
-            f"📍 Address: {address}\n\n"
-            f"📞 Phone: {contact.get('phone', '')}\n\n"
-            f"✉️ Email: {contact.get('email', '')}"
-        )
-
-        return jsonify({
-            "reply": reply
-        })
+    return jsonify({
+        "reply": f"📍 College Location: {address}"
+    })
 
 
     # -----------------------------------
