@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f7f8fc;
+    color: #1f2937;
+}
+
+/* HEADER */
+
+.top-header {
+    height: 72px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.college-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.college-logo {
+    width: 45px;
+    height: 45px;
+
+    background: #eef2ff;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+}
+.college-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.college-brand h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.college-brand p {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+#timeDisplay {
+    font-size: 13px;
+    color: #4b5563;
+}
+
+.header-btn {
+    border: none;
+    background: #111827;
+    color: white;
+
+    padding: 9px 15px;
+    border-radius: 9px;
+
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.header-btn:hover {
+    background: #374151;
+}
+
+
+/* MAIN CHAT */
+
+.chat-page {
+    max-width: 950px;
+    margin: auto;
+    min-height: 650px;
+
+    padding: 55px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ai-icon {
+    width: 62px;
+    height: 62px;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.welcome-section h1 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.welcome-section p {
+    color: #6b7280;
+    margin-top: 7px;
+}
+
+
+/* QUICK BUTTONS */
+
+.quick-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quick-buttons button {
+    border: 1px solid #e5e7eb;
+    background: white;
+
+    padding: 10px 15px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.quick-buttons button:hover {
+    background: #f1f5ff;
+    border-color: #818cf8;
+}
+
+
+/* CHAT BOX */
+
+.chat-box {
+    width: 100%;
+
+    max-height: 470px;
+    overflow-y: auto;
+
+    padding: 10px 5px;
+
+    scroll-behavior: smooth;
+}
+
+.message {
+    display: flex;
+    margin: 12px 0;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.message-content {
+    max-width: 75%;
+
+    padding: 12px 16px;
+
+    border-radius: 16px;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+}
+
+.user-message .message-content {
+    background: #4f46e5;
+    color: white;
+
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message .message-content {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-bottom-left-radius: 5px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* TYPING */
+
+.typing {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.typing span {
+    width: 7px;
+    height: 7px;
+
+    background: #9ca3af;
+
+    border-radius: 50%;
+
+    animation: typing 1.2s infinite;
+}
+
+.typing span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* INPUT AREA */
+
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: white;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 18px;
+
+    padding: 8px 10px;
+
+    margin-top: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.input-area input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    padding: 10px;
+}
+
+.icon-btn,
+.send-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.icon-btn {
+    background: #f3f4f6;
+}
+
+.icon-btn:hover {
+    background: #e5e7eb;
+}
+
+.send-btn {
+    background: #4f46e5;
+    color: white;
+}
+
+.send-btn:hover {
+    background: #4338ca;
+}
+
+.recording {
+    background: #fee2e2 !important;
+}
+
+
+/* PRIVACY TEXT */
+
+.privacy-text {
+    text-align: center;
+
+    font-size: 11px;
+
+    color: #9ca3af;
+
+    margin-top: 12px;
+}
+
+
+/* COLLEGE INFORMATION */
+
+.college-info {
+    background: white;
+
+    padding: 60px 25px;
+
+    border-top: 1px solid #e5e7eb;
+}
+
+.college-info h2 {
+    text-align: center;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.college-info > p {
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    line-height: 1.7;
+}
+
+.info-grid {
+    max-width: 950px;
+
+    margin: 35px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.info-card {
+    padding: 22px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    background: #fafafa;
+}
+
+.info-card h3 {
+    font-size: 15px;
+
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 12px;
+
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+.info-card a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #4f46e5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #d1d5db;
+
+    font-size: 12px;
+
+    margin: 6px 0;
+}
+
+footer .copyright {
+    margin-top: 20px;
+
+    color: #9ca3af;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .top-header {
+        padding: 0 15px;
+    }
+
+    .header-right {
+        gap: 7px;
+    }
+
+    #timeDisplay {
+        display: none;
+    }
+
+    .college-brand h2 {
+        font-size: 14px;
+    }
+
+    .college-brand p {
+        font-size: 9px;
+    }
+
+    .chat-page {
+        padding-top: 35px;
+    }
+
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+
+    .message-content {
+        max-width: 88%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-buttons {
+        gap: 7px;
+    }
+
+    .quick-buttons button {
+        font-size: 11px;
+    }
+}
+
+/* ==============================
+   DARK MODE
+   ============================== */
+
+body.dark-mode {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .top-header {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .college-brand p,
+body.dark-mode #timeDisplay {
+    color: #9ca3af;
+}
+
+body.dark-mode .quick-buttons button,
+body.dark-mode .bot-message .message-content,
+body.dark-mode .input-area {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f9fafb;
+}
+
+body.dark-mode .input-area input {
+    background: transparent;
+    color: white;
+}
+
+body.dark-mode .input-area input::placeholder {
+    color: #9ca3af;
+}
+
+body.dark-mode .icon-btn {
+    background: #374151;
+    color: white;
+}
+
+body.dark-mode .college-info {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+body.dark-mode .info-card {
+    background: #111827;
+    border-color: #374151;
+}
+
+body.dark-mode footer {
+    background: #030712;
+}
